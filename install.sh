@@ -34,6 +34,22 @@ banner() {
 		cd ~/Random-Theme/files
 		sleep 1
 		dpkg -i Random-Theme.deb
+		
+		printf "\n\033[1;96m Now setuping auto suggession and highlighting\n"
+		cd ~/Theme > /dev/null 2>&1
+		printf "\n\033[1;93m Cloning Auto Suggession\n\n"
+		git clone https://github.com/zsh-users/zsh-autosuggestions
+		printf "\n\033[1;93m Cloning Highlighting\n\n"
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting
+		printf "\nCloning ohmyzsh\n\n"
+		cd ~
+		git clone https://github.com/ohmyzsh/ohmyzsh
+		mv ohmyzsh .oh-my-zsh
+		cd ~
+		printf \nCloning Powerlevel10k\n\n"
+		git clone https://github.com/romkatv/powerlevel10k
+		
+		
 		pa
 		fi
 		}

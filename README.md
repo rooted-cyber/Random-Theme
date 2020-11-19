@@ -6,7 +6,7 @@
  
  ## Instagram ID :<b>www.instagram.com/rootedcyber</b>
 
- ## Telegram 1st Bot ;<b>https://t.me/rootedcybe_botr</b>
+ ## Telegram 1st Bot ;<b>https://t.me/rootedcybe_bot</b>
  
 
  
@@ -14,8 +14,8 @@
  
 
 
-<img src="https://github.com/rooted-cyber/Random-Theme/raw/master/images/random-theme.png" style="width:300px;height:400px;"</img>
-<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/random2.png" style="width:300px;height:400px;"</img>
+<img src="https://github.com/rooted-cyber/Random-Theme/raw/master/images/random-theme.png" style="width:300px;height:400px;">
+<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/random2.png" style="width:300px;height:400px;">
 
 <pre>
  $ apt update

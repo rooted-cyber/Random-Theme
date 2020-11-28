@@ -17,8 +17,11 @@ banner() {
 		cd ~
 		if [ -e zshrc4 ];then
 		random
+		chsh -s zsh
 		sleep 4
 		printf "\n\n Successfully installed random theme\n\n"
+		random
+		printf "\n\n Restart Termux\n\n"
 		else
 		sleep 2
 		printf "\n\n\033[1;91m Not installed random theme !!! Try again!!\n\n"

@@ -114,6 +114,6 @@ banner() {
 				menu2
 				fi
 				}
-				menu
+				se
 		
 		

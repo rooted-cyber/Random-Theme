@@ -55,7 +55,8 @@ banner() {
 		fi
 		}
 	menu() {
-		#echo -e "\033[1;93m"
+		#echo -e "\033[1;93m
+		cd ~/Random-Theme
 		cat b|toilet -F metal -f term
 		printf "\033[0m\n\033[91m[\033[0m1\033[91m]\033[1;92m Install Random Zsh-Theme\n"
 		printf "\033[91m[\033[0m2\033[91m]\033[1;92m Uninstall Random Zsh-Theme\n"

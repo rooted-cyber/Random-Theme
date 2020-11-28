@@ -28,7 +28,7 @@ banner() {
 		cd ~
 		if [ -e .zshrc ];then
 		sleep 4
-		printf "\n\n\033[91m Sorry , You cannot use random theme because you already install zsh theme!!!\n\n"
+		printf "\n\n\033[91m Sorry  You cannot use random theme because you already install zsh theme!!!\n\n"
 		exit
 		else
 		cd ~/Random-Theme/files
@@ -46,10 +46,8 @@ banner() {
 		git clone https://github.com/ohmyzsh/ohmyzsh
 		mv ohmyzsh .oh-my-zsh
 		cd ~
-		printf \nCloning Powerlevel10k\n\n"
+		printf "\nCloning Powerlevel10k\n\n"
 		git clone https://github.com/romkatv/powerlevel10k
-		
-		
 		pa
 		fi
 		}

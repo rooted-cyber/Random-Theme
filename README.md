@@ -14,7 +14,7 @@
  
 
 
-<img src="https://github.com/rooted-cyber/Random-Theme/raw/master/images/random-theme.png" style="width:300px;height:400px;">
+<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/random-theme.png" style="width:300px;height:400px;">
 <img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/random2.png" style="width:300px;height:400px;">
 
 <pre>

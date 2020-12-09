@@ -95,9 +95,20 @@ banner() {
 			apt install --fix-broken
 			cd $PREFIX
 			echo "Setup complete" >> setup
+			cd ~/Random-Theme
+			rm -f changelog.sh
 			clear
 			menu
 			}
+			chg() {
+				if [ -e ~/Random-Theme ];then
+				echo
+				else
+				clear
+				printf "\n\033[1;92m This Tool Is Not For Any Child\n\n"
+				exit
+				fi
+				}
 			menu2() {
 				printf "\n\n\n\033[91m[\033[0m1\033[91m]\033[1;92m Install Requirements\n\n\n"
 				printf "\033[1;93m Press 1 and Enter\n\n"
@@ -115,6 +126,18 @@ banner() {
 				menu2
 				fi
 				}
-				se
-		
+				changelog() {
+					clear
+					cd ~
+					chg
+					wget -q https://raw.githubusercontent.com/rooted-cyber/Random-Theme/main/changelog.sh
+					bash changelog.sh
+					rm -f changelog.sh
+					echo -e -n "\n\n\033[1;92m Install it?\033[91m (\033[0my|n\033[1;91m) "
+					read bb
+					if [ "$bb" == "y" ] || [ "$bb" == "Y" ] || [ "$bb" == "*" ];then
+					se
+					fi
+					}
+					changelog
 		

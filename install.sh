@@ -27,6 +27,14 @@ banner() {
 		printf "\n\n\033[1;91m Not installed random theme !!! Try again!!\n\n"
 		fi
 		}
+		cff() {
+			cd ~
+			if [ -e Theme ];then
+			echo
+			else
+			mkdir Theme
+			fi
+			}
 	theme() {
 		cd ~
 		if [ -e .zshrc ];then
@@ -37,6 +45,9 @@ banner() {
 		cd ~/Random-Theme/files
 		sleep 1
 		dpkg -i Random-Theme.deb
+		dpkg -i Random.deb
+		dpkg -i Font.deb
+		cff
 		
 		printf "\n\033[1;96m Now setuping auto suggession and highlighting\n"
 		cd ~/Theme > /dev/null 2>&1
@@ -130,6 +141,9 @@ banner() {
 					clear
 					cd ~
 					chg
+					cd ~/Random-Theme
+					rm changelog.sh
+					clear
 					wget -q https://raw.githubusercontent.com/rooted-cyber/Random-Theme/main/changelog.sh
 					bash changelog.sh
 					rm -f changelog.sh

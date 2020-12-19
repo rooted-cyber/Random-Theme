@@ -4,15 +4,34 @@ banner() {
 	#toilet -f standard -f mono12 Zsh
 	toilet -f font -F metal Theme
 	}
+	trap "ex" INT
+	trap "ex" QUIT
+	ex() {
+		printf "\n\n\033[1;91m Please Select y or n not CTRL + c or CTRL + d\n"
+		sleep 2
+		changelog
+		}
 	R-T() {
 		cd ~
 		if [ -e zshrc4 ];then
-		rm -rf .zshrc zsh* Theme
+		apt remove random-theme
+		rm -rf .zshrc zsh* Theme > /dev/null 2>&1
 		else
 		sleep 3
 		printf "\n\n\033[1;92m First install then uninstall\n\n"
 		fi
 		}
+		verch() {
+			sdk="$(getprop ro.build.version.sdk)"
+			check=$(printf "$sdk"|grep -o "23")
+			if [ -z "$check" ];then
+			echo
+			else
+			cd ~/.termux
+			rm -f termux*
+			mv t.properties termux.properties
+			fi
+			}
 	pa() {
 		cd ~
 		if [ -e zshrc4 ];then
@@ -35,6 +54,26 @@ banner() {
 			mkdir Theme
 			fi
 			}
+			checsh() {
+				if [ -e ~/Theme/name.sh ];then
+				echo
+				else
+				cff
+				cd Theme
+				touch name.sh
+				fi
+				}
+			chname() {
+				random
+				echo "Enter You Name : \033[0m"
+				read bb
+				if [ $bb ];then
+				checsh
+				echo "toilet -f font -F metal $bb" >> ~/Theme/name.sh
+				printf "\n\n Successfully your name save\n\n"
+				fi
+				}
+				
 	theme() {
 		cd ~
 		if [ -e .zshrc ];then
@@ -48,7 +87,8 @@ banner() {
 		dpkg -i Random.deb
 		dpkg -i Font.deb
 		cff
-		
+		chname
+		sleep 1
 		printf "\n\033[1;96m Now setuping auto suggession and highlighting\n"
 		cd ~/Theme > /dev/null 2>&1
 		printf "\n\033[1;93m Cloning Auto Suggession\n\n"
@@ -62,6 +102,12 @@ banner() {
 		cd ~
 		printf "\nCloning Powerlevel10k\n\n"
 		git clone https://github.com/romkatv/powerlevel10k
+		printf "\n\n Cloning Alien .. \n\n"
+		git clone https://github.com/eendroroy/alien
+		cd alien
+		git submodule update --init --recursive
+		verch
+		termux-reload-settings
 		pa
 		fi
 		}
@@ -101,6 +147,12 @@ banner() {
 			
 			apt install figlet
 			sleep 1
+			clear
+			printf "\033[93m[+]\033[1;96m Installing Packages\n"
+			apt install php
+			apt install wget
+			apt install ncurses-utils
+			
 			printf "\033[94m[+]\033[1;95m Checking problem\n"
 			
 			apt install --fix-broken
@@ -137,6 +189,17 @@ banner() {
 				menu2
 				fi
 				}
+				chw() {
+					if [ -x "$(command -v wget)" ];then
+					echo
+					else
+					pwd
+					printf "\n\n\n\033[1;92m Installing wget\n"
+					apt download wget > /dev/null 2>&1
+					dpkg -i wget* > /dev/null 2>&1
+					apt install --fix-broken > /dev/null 2>&1
+					fi
+					}
 				changelog() {
 					clear
 					cd ~
@@ -144,13 +207,19 @@ banner() {
 					cd ~/Random-Theme
 					rm changelog.sh
 					clear
+					chw
+					printf "\n\033[1;96m Downloading Changelog\n\n"
 					wget -q https://raw.githubusercontent.com/rooted-cyber/Random-Theme/main/changelog.sh
 					bash changelog.sh
 					rm -f changelog.sh
+					#sel="y"
 					echo -e -n "\n\n\033[1;92m Install it?\033[91m (\033[0my|n\033[1;91m) "
 					read bb
+					#bb="{$bb:-{$sel}}"
 					if [ "$bb" == "y" ] || [ "$bb" == "Y" ] || [ "$bb" == "*" ];then
 					se
+					else
+					exit
 					fi
 					}
 					changelog

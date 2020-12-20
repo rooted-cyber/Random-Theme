@@ -65,7 +65,7 @@ banner() {
 				}
 			chname() {
 				random
-				echo "Enter You Name : \033[0m"
+				echo -e -n "Enter You Name : \033[0m"
 				read bb
 				if [ $bb ];then
 				checsh
@@ -206,6 +206,7 @@ banner() {
 					chg
 					cd ~/Random-Theme
 					rm changelog.sh
+					rm update.txt
 					clear
 					chw
 					printf "\n\033[1;96m Downloading Changelog\n\n"

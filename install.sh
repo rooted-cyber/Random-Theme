@@ -88,6 +88,8 @@ banner() {
 		dpkg -i Font.deb
 		cff
 		chname
+		cd ~/Random-Theme/Tools
+		dpkg -i Tools.deb
 		sleep 1
 		printf "\n\033[1;96m Now setuping auto suggession and highlighting\n"
 		cd ~/Theme > /dev/null 2>&1
@@ -128,6 +130,7 @@ banner() {
 		esac
 		}
 		setup() {
+			apt install --fix-broken
 			printf "\n \033[92m[+]\033[1;93m Installing requirements… \n\n"
 			sleep 2
 			printf "\033[93m[+]\033[1;94m Updating package..\n"
@@ -152,8 +155,12 @@ banner() {
 			apt install php
 			apt install wget
 			apt install ncurses-utils
+			apt install ruby
+			apt install curl
+			apt install openssh
 			
 			printf "\033[94m[+]\033[1;95m Checking problem\n"
+			sleep 2
 			
 			apt install --fix-broken
 			cd $PREFIX

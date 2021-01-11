@@ -28,6 +28,7 @@
  $ bash install.sh</pre>
  
  
+<pre>
 Changelog V 1.0
 
 [√] Added  Zsh Random-Theme
@@ -80,3 +81,4 @@ Changelog V 1.0
  
  
  
+</pre>

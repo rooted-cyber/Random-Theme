@@ -29,3 +29,8 @@ printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m Many issu
 printf "\n\n\033[1;92m\t\tChangelog V 1.4\n\n"
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Changing \033[1;93m one theme \n"
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m Many issue \n"
+printf "\n\n\033[1;92m\t\tChangelog V 1.5\n\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m Option to remove above text\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m Feedback option \n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m To set only one theme \n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m Many issue \n\n"

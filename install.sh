@@ -4,13 +4,7 @@ banner() {
 	#toilet -f standard -f mono12 Zsh
 	toilet -f font -F metal Theme
 	}
-	trap "ex" INT
-	trap "ex" QUIT
-	ex() {
-		printf "\n\n\033[1;91m Please Select y or n not CTRL + c or CTRL + d\n"
-		sleep 2
-		changelog
-		}
+	
 	R-T() {
 		cd ~
 		if [ -e zshrc4 ];then
@@ -73,6 +67,16 @@ banner() {
 				printf "\n\n Successfully your name save\n\n"
 				fi
 				}
+				chpy() {
+					if [ -e $PREFIX/bin/python ];then
+					echo
+					else
+					printf "\n\033[1;91[×] Not installed python!!!\n\n"
+					sleep 1
+					printf "\n\033[1;92m Install python command :\033[0m apt install python\n"
+					exit
+					fi
+					}
 				
 	theme() {
 		cd ~
@@ -83,6 +87,7 @@ banner() {
 		else
 		cd ~/Random-Theme/files
 		sleep 1
+		chpy
 		dpkg -i Random-Theme.deb
 		dpkg -i Random.deb
 		dpkg -i Font.deb
@@ -202,9 +207,10 @@ banner() {
 					else
 					pwd
 					printf "\n\n\n\033[1;92m Installing wget\n"
-					apt download wget > /dev/null 2>&1
-					dpkg -i wget* > /dev/null 2>&1
-					apt install --fix-broken > /dev/null 2>&1
+					apt download wget
+					dpkg -i wget*
+					apt install --fix-broken
+					clear
 					fi
 					}
 				changelog() {

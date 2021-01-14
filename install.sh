@@ -50,7 +50,9 @@ banner() {
 			}
 			checsh() {
 				if [ -e ~/Theme/name.sh ];then
-				echo
+				cd ~/Theme
+				rm name.sh
+				touch name.sh
 				else
 				cff
 				cd Theme

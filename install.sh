@@ -9,7 +9,7 @@ banner() {
 		cd ~
 		if [ -e zshrc4 ];then
 		apt remove random-theme
-		rm -rf .zshrc zsh* Theme > /dev/null 2>&1
+		rm .zshrc zsh Theme &> /dev/null
 		else
 		sleep 3
 		printf "\n\n\033[1;92m First install then uninstall\n\n"

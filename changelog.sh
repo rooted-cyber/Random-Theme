@@ -34,3 +34,5 @@ printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m Option to
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m Feedback option \n"
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m To set only one theme \n"
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m Many issue \n\n"
+printf "\n\n\033[1;92m\t\tChangelog V 1.6\n\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m some issue \n\n"

@@ -111,10 +111,10 @@ banner() {
 		cd ~
 		printf "\nCloning Powerlevel10k\n\n"
 		git clone https://github.com/romkatv/powerlevel10k
-		printf "\n\n Cloning Alien .. \n\n"
-		git clone https://github.com/eendroroy/alien
-		cd alien
-		git submodule update --init --recursive
+		#printf "\n\n Cloning Alien .. \n\n"
+		#git clone https://github.com/eendroroy/alien
+		#cd alien
+		#git submodule update --init --recursive
 		verch
 		termux-reload-settings
 		pa

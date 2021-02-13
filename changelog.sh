@@ -43,3 +43,13 @@ printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m Termux fa
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Change \033[1;93m Two themes \n"
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m To work many comnand in termux failsafe \n"
 printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m Many issue \n\n"
+printf "\n\n\033[1;92m\t\tChangelog V 1.9\n\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[0m sudo \033[1;93m Command for fake root\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[0m sudo2 \033[1;93m command for real root user\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[0m ne \033[1;93m command for changing neofetch\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[0m fdd \033[1;93m command for downloading and installing Font.deb file\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[0m rdd \033[1;93m command for downloading and installing Random.deb file\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[0m ai \033[1;93m command for reinstall package \n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Added \033[1;93m Auto Update Tool command :\033[0m up\n"
+printf "\033[1;91m[\033[1;92m√\033[1;91m]\033[1;96m Fixed \033[1;93m Some issue \n"
+#printf "\033

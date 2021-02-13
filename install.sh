@@ -144,27 +144,14 @@ banner() {
 			apt update
 			apt upgrade
 			sleep 1
-			printf "\033[94m[+]\033[1;95m Installing python\n"
-			apt install python
-			sleep 1
-			printf "\033[95m[+]\033[1;96m Installing zsh\n"
-			apt install zsh
-			printf "\033[91m[+]\033[1;92m Installing toilet\n"
-			
-			apt install toilet
-			sleep 1
-			printf "\033[93m[+]\033[1;94m Installing figlet\n"
-			
-			apt install figlet
-			sleep 1
+			for u in python lsd zsh toilet figlet php wget ncurses-utils nodejs ruby curl openssh proot tsu neofetch ;do
+			printf "\n\033[1;92m Installing \033[1;93m $u\033[0m\n"
+			sleep 0.9
+			apt install $u || apt install --fix-broken
+			sleep 0.4
 			clear
-			printf "\033[93m[+]\033[1;96m Installing Packages\n"
-			apt install php
-			apt install wget
-			apt install ncurses-utils
-			apt install ruby
-			apt install curl
-			apt install openssh
+			printf "\033[1;93m Successfully installed $u\n"
+			done
 			
 			printf "\033[94m[+]\033[1;95m Checking problem\n"
 			sleep 2
@@ -211,6 +198,7 @@ banner() {
 					printf "\n\n\n\033[1;92m Installing wget\n"
 					apt download wget
 					dpkg -i wget*
+					apt install wget
 					apt install --fix-broken
 					clear
 					fi

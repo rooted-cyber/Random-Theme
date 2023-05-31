@@ -1,4 +1,15 @@
-#$ installayion in termux
+## installayion in termux
+
+```
+apt update && apt upgrade
+apt install wget git
+apt install --fix -broken
+git clone https://github.com/rooted-cyber/Random-Theme
+cd Random*
+bash install.sh
+```
+
+
 # Contact :
  
  ## Facebook ID : <b>www.facebook.com/maruf.alam.94043626</b>

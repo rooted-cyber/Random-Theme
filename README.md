@@ -1,9 +1,9 @@
-## installayion in termux
+## installation in termux
 
 ```
 apt update && apt upgrade
 apt install wget git
-apt install --fix -broken
+apt install --fix-broken
 git clone https://github.com/rooted-cyber/Random-Theme
 cd Random*
 bash install.sh

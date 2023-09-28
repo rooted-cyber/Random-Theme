@@ -212,10 +212,10 @@ banner() {
 					rm update.txt
 					clear
 					chw
-					printf "\n\033[1;96m Downloading Changelog\n\n"
-					wget -q https://raw.githubusercontent.com/rooted-cyber/Random-Theme/main/changelog.sh
-					bash changelog.sh
-					rm -f changelog.sh
+					#printf "\n\033[1;96m Downloading Changelog\n\n"
+					#wget -q https://raw.githubusercontent.com/rooted-cyber/Random-Theme/main/changelog.sh
+					#bash changelog.sh
+					#rm -f changelog.sh
 					#sel="y"
 					echo -e -n "\n\n\033[1;92m Install it?\033[91m (\033[0my|n\033[1;91m) "
 					read bb
